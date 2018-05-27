@@ -24911,11 +24911,6 @@
 	        IndexLink,
 	        { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'Examples'
-	      ),
-	      React.createElement(
-	        'a',
-	        { href: '#/about' },
-	        'Go to About'
 	      )
 	    );
 	  }
