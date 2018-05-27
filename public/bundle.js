@@ -26739,26 +26739,53 @@
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	  displayName: 'About',
+	  displayName: "About",
 
 	  render: function render() {
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'About'
+	        "h1",
+	        { className: "text-center" },
+	        "About"
 	      ),
 	      React.createElement(
-	        'p',
+	        "p",
 	        null,
-	        'This is the about page'
+	        "This page displays the current weather for any part of the world. This whole app has been made using REACT,JS and CSS. I have also called the openWeatherMap API to help find the weather."
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        " Some of the tools and frameworks I used are:"
+	      ),
+	      React.createElement(
+	        "ul",
+	        null,
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "https://reactjs.org/" },
+	            "React"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "https://openweathermap.org/" },
+	            "Open Weather Map"
+	          )
+	        )
 	      )
 	    );
 	  }
@@ -26799,8 +26826,8 @@
 	        null,
 	        React.createElement(
 	          Link,
-	          { to: '/?location=Philadelphia' },
-	          'Philadelphia, PA'
+	          { to: '/?location=London' },
+	          'London, UK'
 	        )
 	      ),
 	      React.createElement(
@@ -26808,8 +26835,8 @@
 	        null,
 	        React.createElement(
 	          Link,
-	          { to: '/?location=Rio' },
-	          'Rio, Brazil'
+	          { to: '/?location=Delhi' },
+	          'Delhi, IN'
 	        )
 	      )
 	    )
