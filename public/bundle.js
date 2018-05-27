@@ -24911,23 +24911,22 @@
 	var React = __webpack_require__(8);
 	var Nav = __webpack_require__(224);
 
-	var Main = React.createClass({
-	  displayName: 'Main',
-
-	  render: function render() {
-	    return React.createElement(
+	var Main = function Main(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(Nav, null),
+	    React.createElement(
 	      'div',
-	      null,
-	      React.createElement(Nav, null),
+	      { className: 'row' },
 	      React.createElement(
-	        'h2',
-	        null,
-	        'Main Component'
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
+	  );
+	};
 
 	module.exports = Main;
 
@@ -26775,26 +26774,47 @@
 
 	var React = __webpack_require__(8);
 
-	var Examples = React.createClass({
-	  displayName: 'Examples',
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
 
-	  render: function render() {
-	    return React.createElement(
-	      'div',
+	var Examples = function Examples(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h1',
+	      { className: 'text-center' },
+	      'Examples'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Here are a few example locations to try out:'
+	    ),
+	    React.createElement(
+	      'ol',
 	      null,
 	      React.createElement(
-	        'h3',
+	        'li',
 	        null,
-	        'Examples'
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Philadelphia' },
+	          'Philadelphia, PA'
+	        )
 	      ),
 	      React.createElement(
-	        'p',
+	        'li',
 	        null,
-	        'Welcome to example page!'
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Rio' },
+	          'Rio, Brazil'
+	        )
 	      )
-	    );
-	  }
-	});
+	    )
+	  );
+	};
 
 	module.exports = Examples;
 
