@@ -77,7 +77,6 @@ var Weather = React.createClass({
         {renderMessage()}
         {renderError()}
       </div>
-
     );
   }
 });
